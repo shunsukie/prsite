@@ -319,6 +319,10 @@ ul {
     margin: 0;
 }
 
+.hero-download {
+    margin-top: var(--spacing-lg);
+}
+
 .hero-cta {
     display: flex;
     gap: var(--spacing-sm);
@@ -436,6 +440,26 @@ ul {
 
 .btn i {
     margin-right: 0.5rem;
+}
+
+.btn-download {
+    background: linear-gradient(135deg, var(--color-accent) 0%, var(--color-accent-dark) 100%);
+    color: var(--color-white);
+    box-shadow: var(--shadow-lg);
+    border: 2px solid transparent;
+}
+
+.btn-download:hover {
+    background: linear-gradient(135deg, var(--color-accent-dark) 0%, var(--color-accent) 100%);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--color-accent-light);
+    color: var(--color-white);
+}
+
+.btn-download i {
+    font-size: 1.2em;
+    vertical-align: middle;
 }
 
 /* ====================================
@@ -1241,6 +1265,11 @@ ul {
 
 .contact-details a:hover {
     color: var(--color-accent);
+}
+
+.contact-download {
+    margin-top: var(--spacing-lg);
+    text-align: center;
 }
 
 .contact-cta {
