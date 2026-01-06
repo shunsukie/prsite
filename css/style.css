@@ -538,11 +538,105 @@ ul {
 }
 
 .video-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     border-radius: 16px;
     overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    background: var(--color-black);
+}
+
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    background: var(--color-black);
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.video-link-container {
+    text-align: center;
+}
+
+.video-thumbnail-link {
+    display: block;
+    text-decoration: none;
+}
+
+.video-thumbnail {
+    position: relative;
+    margin-bottom: var(--spacing-md);
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all var(--transition-normal);
     box-shadow: var(--shadow-lg);
+}
+
+.video-thumbnail:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-xl);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all var(--transition-normal);
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.play-button-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
+    transition: all var(--transition-normal);
+    z-index: 2;
+}
+
+.video-thumbnail:hover .play-button-overlay {
+    color: var(--color-accent);
+    transform: translate(-50%, -50%) scale(1.15);
+}
+
+.video-duration {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: var(--color-white);
+    padding: var(--spacing-md);
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    z-index: 1;
+}
+
+.video-description {
+    font-size: 1rem;
+    color: var(--color-gray);
+    margin-top: var(--spacing-sm);
+}
+
+.video-link-btn {
+    margin-top: var(--spacing-sm);
 }
 
 .video-placeholder {
