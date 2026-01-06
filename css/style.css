@@ -538,12 +538,14 @@ ul {
 }
 
 .video-container {
-    max-width: 900px;
+    max-width: 800px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 var(--spacing-md);
     border-radius: 16px;
     overflow: hidden;
     box-shadow: var(--shadow-xl);
-    background: var(--color-black);
+    background: transparent;
 }
 
 .video-wrapper {
@@ -552,6 +554,8 @@ ul {
     height: 0;
     overflow: hidden;
     background: var(--color-black);
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
 .video-wrapper iframe {
@@ -1591,6 +1595,11 @@ ul {
     
     .contact-info {
         grid-template-columns: 1fr;
+    }
+    
+    .video-container {
+        padding: 0 var(--spacing-sm);
+        max-width: 100%;
     }
     
     .footer-content {
